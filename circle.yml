@@ -7,8 +7,14 @@ deployment:
     commands:
       - eb use Dev-env --profile default
       - eb deploy --profile default
+    environment:
+      foo: iki
+      baz: 444  
   production:
     branch: master
     commands:
       - eb use Prod-env --profile default
       - eb deploy --profile default
+    environment:
+      foo: bar
+      baz: 123  
