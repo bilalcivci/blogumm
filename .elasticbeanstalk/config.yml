@@ -1,0 +1,19 @@
+branch-defaults:
+  develop:
+    environment: Dev-env
+environment-defaults:
+  Dev-env:
+    branch: null
+    repository: null
+global:
+  application_name: Demo-Application
+  default_ec2_keyname: null
+  default_platform: arn:aws:elasticbeanstalk:eu-central-1::platform/Puma with Ruby
+    2.4 running on 64bit Amazon Linux/2.6.2
+  default_region: eu-central-1
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: demo
+  sc: git
+  workspace_type: Application
