@@ -10,13 +10,9 @@ default: &default
   timeout: 5000
 
 development:
-  <<: *default
-  database: db/development.sqlite3
-  # adapter: mysql2
-  # database: <%= ENV['TEST_DATABASE'] %> # databaseName
-  # username: <%= ENV['TEST_USERNAME'] %>  # userName
-  # password: <%= ENV['TEST_PASSWORD'] %> # userPassword;
-  # host:     <%= ENV['TEST_HOST'] %>      # awsDbsAddress
+  adapter: sqlite3
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
 
 
 # Warning: The database defined as "test" will be erased and
